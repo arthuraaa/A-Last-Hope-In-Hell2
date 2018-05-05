@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Map-ALHIH", "Map-ALHIH.csproj", "{D548BB9A-4A2D-EEB1-6148-8CE25F03332F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Map-ALHIH.Plugins", "Map-ALHIH.Plugins.csproj", "{B2BDB1C1-9285-22C2-7167-50B942083768}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Map-ALHIH.Editor.Plugins", "Map-ALHIH.Editor.Plugins.csproj", "{357A3037-6B71-4946-1DB8-10003B72CE99}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D548BB9A-4A2D-EEB1-6148-8CE25F03332F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D548BB9A-4A2D-EEB1-6148-8CE25F03332F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D548BB9A-4A2D-EEB1-6148-8CE25F03332F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D548BB9A-4A2D-EEB1-6148-8CE25F03332F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2BDB1C1-9285-22C2-7167-50B942083768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2BDB1C1-9285-22C2-7167-50B942083768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2BDB1C1-9285-22C2-7167-50B942083768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2BDB1C1-9285-22C2-7167-50B942083768}.Release|Any CPU.Build.0 = Release|Any CPU
+		{357A3037-6B71-4946-1DB8-10003B72CE99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{357A3037-6B71-4946-1DB8-10003B72CE99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{357A3037-6B71-4946-1DB8-10003B72CE99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{357A3037-6B71-4946-1DB8-10003B72CE99}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
