@@ -48,10 +48,14 @@ public class Tir : MonoBehaviour {
 
 			RaycastHit raycastHit;
 			Physics.Raycast (gameObject.transform.position, gameObject.transform.forward, out raycastHit, Mathf.Infinity);
-			if (raycastHit.collider != null)
-				Debug.DrawLine (gameObject.transform.position, raycastHit.point);
-
-
+            if (raycastHit.collider != null)
+            {
+                Debug.DrawLine(gameObject.transform.position, raycastHit.point);
+                PhotonNetwork.Instantiate(Projectile.name, raycastHit.point, Quaternion.identity, 0);
+                print(raycastHit.point);
+            }
+            
+                /*
             if (raycastHit.collider.tag == "BrasL")
             {
                 print("brasL");
@@ -65,13 +69,14 @@ public class Tir : MonoBehaviour {
 
             if (raycastHit.collider.tag == "HeadZombie")
             {
-                raycastHit.collider.gameObject.GetComponent<ExplosionTete>().enabled = true;
+                print("tete");
+                raycastHit.collider.gameObject.GetComponent<ExplosionTete>().touche(); ;
             }
 
             if (raycastHit.collider.tag == "zombie")
             {
                 raycastHit.collider.gameObject.GetComponent<EnemyMove>().lifezombie -= 10;
-            }
+            }*/
 
             lastShoot = Time.time;
 			clip--;

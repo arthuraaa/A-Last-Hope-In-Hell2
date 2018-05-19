@@ -32,7 +32,7 @@ public class activationMoveZombie : MonoBehaviour {
         {
             print("2");
             // GetComponent<IKControl>().enabled = false;
-            GetComponent<EnemyMove>().enabled = false;
+            //GetComponent<EnemyMove>().enabled = false;
             
             for (int i = 0; i < componentToDisable.Length; i++)
             {

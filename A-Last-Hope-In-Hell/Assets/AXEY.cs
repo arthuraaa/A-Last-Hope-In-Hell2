@@ -16,19 +16,20 @@ public class AXEY : MonoBehaviour {
 
         
         
-        if ((float) (this.transform.rotation.x) > 0.5f)
+        /*if ((float) (this.transform.rotation.x) > 0.5f)
         {
             print("trop bas");
-            transform.Rotate(-0.1f, 0, 0);                
+            transform.Rotate(this.transform.rotation.x -0.5f- 0.1f, 0, 0);                
         }
         else
          if ((float)(this.transform.rotation.x) < -0.5f)
         {
            
-            transform.Rotate(0.1f, 0, 0);
+            transform.Rotate(this.transform.rotation.x + 0.5f + 0.1f, 0, 0);
         }
-        else
+        else*/
         {
+           // print("cam" + this.transform.rotation.x);
             transform.Rotate((-Input.GetAxisRaw("Mouse Y")) * Sensi, 0, 0);
         }
             

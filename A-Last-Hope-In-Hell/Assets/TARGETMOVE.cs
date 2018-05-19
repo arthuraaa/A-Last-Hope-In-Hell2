@@ -11,19 +11,20 @@ public class TARGETMOVE : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        	transform.Rotate (0, (-Input.GetAxisRaw ("Mouse Y")) * Sensi, 0);
+        	//transform.Rotate (0, (-Input.GetAxisRaw ("Mouse Y")) * Sensi, 0);
         /*if ((float)(this.transform.rotation.x) > 0.5f)
         {
-            transform.Rotate(0, 0.1f, 0);
+            transform.Rotate(0, this.transform.rotation.x + 0.5f+0.1f, 0);
         }
         else
          if ((float)(this.transform.rotation.x) < -0.5f)
         {
-            transform.Rotate(0, -0.1f, 0);
+            transform.Rotate(0, this.transform.rotation.x - 0.5f -0.1f, 0);
         }
-        else
+        else*/
         {
+            //print("target" + this.transform.rotation.x);
             transform.Rotate(0, (-Input.GetAxisRaw("Mouse Y")) * Sensi, 0);
-        }*/
+        }
     }
 }

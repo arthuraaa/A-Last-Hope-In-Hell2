@@ -18,7 +18,7 @@ public class EnemyMove : MonoBehaviour {
 
     public Transform ObjectifDuZombie ;
 
-    static public NavMeshAgent _navMeshAgent; //rajout static
+    public NavMeshAgent _navMeshAgent; //rajout static
 
     public Animator anim;
 
@@ -46,14 +46,21 @@ public class EnemyMove : MonoBehaviour {
             Debug.LogError("probleme vaec le mesh agent");
         }
         else
-        {           
+        {
+            //
+        
+            //
             SetDestination();
         }
-	}
+
+
+       
+
+    }
 
     private void SetDestination()
     {
-       
+
         var photonViews = UnityEngine.Object.FindObjectsOfType<PhotonView>();// On stock les joueurs dans la listedejoueur
         foreach (var view in photonViews)
         {
@@ -66,8 +73,7 @@ public class EnemyMove : MonoBehaviour {
                 }
             }
         }
-
-       // print(listedejoueurs.Count);
+        // print(listedejoueurs.Count);
 
         JoueurAAttaquer = listedejoueurs[0];
         for (int i = 0; i < listedejoueurs.Count; i++)
@@ -81,7 +87,7 @@ public class EnemyMove : MonoBehaviour {
         Vector3 distanceZombieJoueur = JoueurAAttaquer.position - this.transform.position;
        if(( distanceZombieJoueur.magnitude < focus)) // si le joueur est assez pres du zombie
         {
-            print("joueur");
+            //print("joueur");
             Vector3 targetVector = JoueurAAttaquer.transform.position;
             _navMeshAgent.SetDestination(targetVector);
             
@@ -96,8 +102,8 @@ public class EnemyMove : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-
-       
+        //print(this.name);
+       // print(_navMeshAgent.transform.position);
         //Debug.LogAssertion(_destination.position+""+this.transform.position);
         if (lifezombie <= 0)//
         {

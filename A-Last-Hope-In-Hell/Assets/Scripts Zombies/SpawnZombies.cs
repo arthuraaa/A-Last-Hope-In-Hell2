@@ -23,13 +23,13 @@ public class SpawnZombies : MonoBehaviour {
     void Update()
     {
         
-        if ( compteur == 0 && PhotonNetwork.playerList.Length==2 && PhotonNetwork.isMasterClient)
+        if ( compteur == 0 && PhotonNetwork.playerList.Length==2 && !PhotonNetwork.isMasterClient)
         {
            
            var z= PhotonNetwork.Instantiate(zombie.name, this.transform.position, Quaternion.identity, 0);
             compteur++;
          
-                z.GetComponent<EnemyMove>().enabled = true;               
+               // z.GetComponent<EnemyMove>().enabled = true;               
                   
         }
        

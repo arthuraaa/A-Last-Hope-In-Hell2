@@ -8,10 +8,7 @@ public class perteBrasG : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        GetComponentInParent<EnemyMove>().lifezombie -= 20;
-        GetComponentInParent<EnemyMove>().attaque -= 20;
-        GetComponentInParent<SkinnedMeshRenderer>().enabled = false;
-        this.gameObject.active = false;
+        
     }
 
     // Update is called once per frame
@@ -19,5 +16,15 @@ public class perteBrasG : MonoBehaviour
     {
 
     }
-   
+    void OnCollisionEnter(Collision Col)
+    {
+        if (Col.gameObject.tag == "bullet")
+        {
+            GetComponentInParent<EnemyMove>().lifezombie -= 20;
+            GetComponentInParent<EnemyMove>().attaque -= 20;
+            GetComponentInParent<SkinnedMeshRenderer>().enabled = false;
+            this.gameObject.active = false;
+        }
+    }
+
 }

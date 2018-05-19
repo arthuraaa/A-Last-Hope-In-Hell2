@@ -4,8 +4,7 @@ using UnityEngine;
 
 
 public class perteDeVie : MonoBehaviour {
-    public GameObject bullet;
-    
+      
 	// Use this for initialization
 	void Start () {
 	
@@ -20,6 +19,7 @@ public class perteDeVie : MonoBehaviour {
     {
         if (Col.gameObject.tag == "bullet")
         {
+            print("touché");
             GetComponentInParent<EnemyMove>().lifezombie -= 10;
         }
     }

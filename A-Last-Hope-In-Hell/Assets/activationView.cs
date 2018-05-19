@@ -19,11 +19,11 @@ public class activationView : MonoBehaviour {
             }
 
             print("1");
-
+           
             //GetComponent<IKControl>().enabled = true;
             GetComponent<Deplacements1>().enabled = true;                      
-            GetComponent<plusdesouris>().enabled = true;
-            GetComponent<CharacterController>().enabled = true;
+           // GetComponent<plusdesouris>().enabled = true;
+           // GetComponent<CharacterController>().enabled = true;
             
             
 
@@ -33,8 +33,8 @@ public class activationView : MonoBehaviour {
             print("2");
             // GetComponent<IKControl>().enabled = false;
             GetComponent<Deplacements1>().enabled = false;                   
-            GetComponent<plusdesouris>().enabled = false;
-            GetComponent<CharacterController>().enabled = false;
+            //GetComponent<plusdesouris>().enabled = false;
+           // GetComponent<CharacterController>().enabled = false;
             for(int i=0; i< componentToDisable.Length; i++)
             {
                 componentToDisable[i].enabled = false;

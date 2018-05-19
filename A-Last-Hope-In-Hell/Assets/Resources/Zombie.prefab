@@ -550,15 +550,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4433207231116214}
   - component: {fileID: 95723032912131400}
+  - component: {fileID: 114138556711486814}
   - component: {fileID: 82964779388479192}
   - component: {fileID: 136605721375399222}
-  - component: {fileID: 114138556711486814}
   - component: {fileID: 195180243117049450}
   - component: {fileID: 114699142970847902}
   - component: {fileID: 114230401519824992}
   - component: {fileID: 114013872342167802}
-  - component: {fileID: 114477827001654308}
-  - component: {fileID: 114257469321291082}
   - component: {fileID: 114398458801663812}
   m_Layer: 0
   m_Name: Zombie
@@ -1016,7 +1014,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1722565373873148}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.31, y: 1.81, z: 3.7}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_Children:
   - {fileID: 4670301854682202}
@@ -1439,7 +1437,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1722565373873148}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 8141a1e3f5562ba4d910d6c02d5d213c, type: 3}
   m_Controller: {fileID: 9100000, guid: 5baaf1eda639436459608825b60975e0, type: 2}
   m_CullingMode: 1
@@ -1466,7 +1464,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1548157059885258}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 21bf17aebb1b2144eb58c93353c5a257, type: 3}
   m_Name: 
@@ -1477,7 +1475,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1722565373873148}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b2eef55530012346aea39a76fcad76a, type: 3}
   m_Name: 
@@ -1490,6 +1488,7 @@ MonoBehaviour:
     type: 2}
   ObjectifDuZombie: {fileID: 4000013258905692, guid: df8b2e05e6bc70e4eb740280ce078f7f,
     type: 2}
+  _navMeshAgent: {fileID: 0}
   anim: {fileID: 95723032912131400}
   soundZombieMarche:
   - {fileID: 8300000, guid: ab0ec6034559748139b9468598b535d4, type: 3}
@@ -1526,49 +1525,26 @@ MonoBehaviour:
   ownershipTransfer: 0
   ObservedComponents:
   - {fileID: 4433207231116214}
+  - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 0
   instantiationId: -1
   currentMasterID: -1
   isRuntimeInstantiated: 0
---- !u!114 &114257469321291082
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1722565373873148}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowLayerWeightsInspector: 1
-  ShowParameterInspector: 1
-  m_SynchronizeParameters:
-  - Type: 4
-    SynchronizeType: 2
-    Name: IsWalking
-  - Type: 4
-    SynchronizeType: 2
-    Name: IsAttacking
-  - Type: 4
-    SynchronizeType: 2
-    Name: IsDead
-  m_SynchronizeLayers:
-  - SynchronizeType: 2
-    LayerIndex: 0
 --- !u!114 &114275169021080630
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1233164622698176}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a27fc1ce436abe4fa8321cec4d96ad1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1556433168900320, guid: 4109e2a95733f354ca55e5ba55466e2f, type: 2}
+  headZombie: {fileID: 1233164622698176}
+  zombie: {fileID: 1722565373873148}
 --- !u!114 &114398458801663812
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1581,28 +1557,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   componentToEnable:
-  - {fileID: 0}
+  - {fileID: 114138556711486814}
   componentToDisable:
   - {fileID: 195180243117049450}
---- !u!114 &114477827001654308
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1722565373873148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fc65f5b714406f4684e5d1d702b938c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
 --- !u!114 &114495657569356398
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1235487230922174}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89b5927c76e2ccc46b8b07b7fb823014, type: 3}
   m_Name: 
@@ -1618,7 +1582,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fc65f5b714406f4684e5d1d702b938c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1556433168900320, guid: 4109e2a95733f354ca55e5ba55466e2f, type: 2}
 --- !u!114 &114699142970847902
 MonoBehaviour:
   m_ObjectHideFlags: 1
